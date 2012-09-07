@@ -11,7 +11,7 @@
     <artifactId>cvs-tag</artifactId>
     <name>Hudson CVS Tagging Plugin</name>
     <packaging>hpi</packaging>
-    <version>1.8-h-1</version>
+    <version>1.8-h-2-SNAPSHOT</version>
     
     <description> 
        This plugin will perform CVS tagging (specifically cvs rtag) after a job has been built successfully.
