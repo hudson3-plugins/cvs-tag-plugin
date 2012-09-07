@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  
+    <parent>
+        <groupId>org.eclipse.hudson.plugins</groupId>
+        <artifactId>hudson-plugin-parent</artifactId>    
+        <version>3.0.0-RC2</version>
+    </parent>
+    
+    <groupId>org.hudsonci.plugins</groupId>
+    <artifactId>cvs-tag</artifactId>
+    <name>Hudson CVS Tagging Plugin</name>
+    <packaging>hpi</packaging>
+    <version>1.8-SNAPSHOT</version>
+    
+    <description> 
+       This plugin will perform CVS tagging (specifically cvs rtag) after a job has been built successfully.
+    </description>
+  
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+  
+    <url>http://wiki.hudson-ci.org/display/HUDSON/CVS+Tagging+Plugin</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hudsonci.plugins</groupId>
+            <artifactId>cvs</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>1.8.6</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+    <scm>
+        <connection>scm:git:git://github.com/hudson3-plugins/cvs-tag-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:hudson3-plugins/cvs-tag-plugin.git</developerConnection>
+        <url>http://github.com/hudson3-plugins/cvs-tag-plugin</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>wjprakash</id>
+            <name>Winston Prakash</name>
+            <email>winston.prakash@gmail.com</email>
+            <roles>
+                <role>
+                    Maintainer
+                </role>
+            </roles>
+        </developer>
+        <developer>
+            <id>btrim</id>
+            <name>Brad Trimby</name>
+            <email>trimbybj@gmail.com</email>
+            <organization />
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>-5</timezone>
+        </developer>
+        <developer>
+            <id>draco2k8</id>
+            <name>Brendt Lucas</name>
+            <email>draco2k4@yahoo.com</email>
+            <organization />
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+        <developer>
+            <id>derekmahar</id>
+            <name>Derek Mahar</name>
+            <email>derek@derekmahar.ca</email>
+            <organization />
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
+                    <xmlOutput>true</xmlOutput>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>  
+
